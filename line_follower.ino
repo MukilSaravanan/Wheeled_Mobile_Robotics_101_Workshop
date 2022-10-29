@@ -56,7 +56,7 @@ void motor_driver(int mtr1,int mtr2) {
 
 	 
 }
-void PID_CONTROL(int irl,int irr){
+void PID_control(int irl,int irr){
   irl=1-irl;
   irr=1-irr;
   Serial.print("irl:");
@@ -114,10 +114,6 @@ void PID_CONTROL(int irl,int irr){
 
 
 void loop() {
- 
-  PID_CONTROL(digitalRead(irL),digitalRead(irR));
+  PID_control(digitalRead(irL),digitalRead(irR));
 	delay(1000);
 }
-
-
- 
